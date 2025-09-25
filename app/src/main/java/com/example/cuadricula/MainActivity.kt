@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.cuadricula.ui.theme.CuadriculaTheme
+import com.example.cuadricula.ui.theme.TopicGrid
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,11 +21,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             CuadriculaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    TopicGrid(
+                        topics = com.example.cuadricula.ui.theme.DataSource.topics,
                         modifier = Modifier.padding(innerPadding)
                     )
-
 
                 }
             }
